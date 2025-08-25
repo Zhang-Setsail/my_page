@@ -140,3 +140,69 @@ span.highlight {
   color: #666666;
   font-style: italic;
 }
+
+/* Research item layout */
+.research-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.research-image {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.research-text {
+  flex: 3;
+}
+
+/* 语言切换按钮样式 */
+.lang-switch {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #333;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lang-switch:hover {
+  background-color: #333;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* 页面切换动画 */
+.page-container {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.page-container.slide-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.page-container.slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInFromTop 0.6s ease-out forwards;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

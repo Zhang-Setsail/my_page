@@ -1,18 +1,4 @@
 <!DOCTYPE HTML>
-<style>
-  .research-item {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-  }
-  .research-image {
-    flex: 1;
-    margin-right: 20px;
-  }
-  .research-text {
-    flex: 3;
-  }
-</style>
 
 <html lang="en">
   <head>
@@ -30,13 +16,14 @@
   </head>
 
   <body>
+    <div class="page-container">
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
           <table width="100%" align="center" border="0" cellspacing="0" cellpadding="10"><tbody>
             <tr>
               <td style="text-align:right;">
-                <a href="index.html">English</a>
+                <a href="index.html" class="lang-switch" onclick="handleLanguageSwitch(event, 'index.html')">English</a>
               </td>
             </tr>
           </tbody></table>
@@ -402,6 +389,28 @@
         </td>
       </tr>
     </table>
+    </div>
+    
+    <script>
+      function handleLanguageSwitch(event, targetUrl) {
+        event.preventDefault();
+        
+        // 添加退出动画
+        const container = document.querySelector('.page-container');
+        container.classList.add('slide-out');
+        
+        // 延迟跳转，让动画完成
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 300);
+      }
+      
+      // 页面加载时添加进入动画
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.querySelector('.page-container');
+        container.classList.add('slide-in');
+      });
+    </script>
   </body>
 </html>
 
