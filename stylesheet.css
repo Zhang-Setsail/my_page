@@ -161,19 +161,21 @@ span.highlight {
 .lang-switch {
   display: inline-block;
   padding: 8px 16px;
-  border: 2px solid #333;
+  border: 2px solid #333 !important;
   border-radius: 6px;
-  background-color: #f8f9fa;
-  color: #333;
-  text-decoration: none;
+  background-color: #f8f9fa !important;
+  color: #333 !important;
+  text-decoration: none !important;
   font-weight: 500;
   transition: all 0.3s ease;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.lang-switch:hover {
-  background-color: #333;
-  color: white;
+.lang-switch:hover,
+.lang-switch:focus {
+  background-color: #333 !important;
+  color: white !important;
+  text-decoration: none !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
