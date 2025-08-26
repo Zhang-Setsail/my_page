@@ -1,0 +1,86 @@
+\documentclass[a4paper]{article}
+\usepackage[UTF8]{ctex}
+\usepackage[top=0.3in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+
+\setstretch{1.1}
+\setlist{itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+% Add space between sections
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Add space between subsections within sections
+\newcommand{\spacedsection}[2]{%
+    \vspace{8pt}%
+    \textbf{#1} \hfill #2 \\%
+}
+
+
+\begin{document}
+
+\centerline{\Large\bf 张启航}
+\centerline{个人主页: \href{https://zhangsetsail.com/zn_ch}{zhangsetsail.com} \\ Email: qihangzhang@link.cuhk.edu.cn \\ Github: \href{https://github.com/Zhang-Setsail}{Zhang-Setsail}} 
+
+\section*{Education}
+\textbf{香港中文大学（深圳）} \hfill 2019/08 - 2023/06 \\
+工学学士
+\begin{itemize}[noitemsep]
+  \item 专业：计算机科学与工程
+\end{itemize}
+
+\textbf{香港中文大学（深圳）} \hfill 2023/08 - 至今 \\
+理学硕士
+\begin{itemize}[noitemsep]
+  \item 专业：计算机科学
+\end{itemize}
+
+\section*{Work Experience}
+\textbf{香港中文大学（深圳）数据科学学院} \hfill 2023/09 - 至今 \\
+ 助教 \hfill 深圳
+\begin{itemize}[noitemsep]
+\item 担任Database System和Parallel Programming等核心课程的助教，负责课程支持与学生指导工作。
+\item 优化课程作业模板与自动化评分系统，引入前沿技术（\href{https://github.com/tonyyxliu/CUHKSZ-CSC4005/tree/main/project4}{如Triton框架}）作为编程实践工具，提升学生实践能力与课程实用性。
+\end{itemize}
+
+\textbf{Vivo移动通信} \hfill 2021/07 - 2021/10 \\
+ 软件开发实习生 \hfill 深圳
+\begin{itemize}[noitemsep]
+\item 参与Android测试引擎的开发与维护，编写并优化核心代码，开发多个基于Python的自动化测试组件以提升测试效率与覆盖率，同时提高代码的可读性和可维护性。
+\item 扩展测试引擎功能，支持多国定制化测试需求，确保测试流程适配不同地区的语言和文化要求。
+\item 实现Google Android测试基准的全流程自动化，编写脚本与工具链集成，确保测试流程符合Google测试工程规范。
+\item 编写并更新测试引擎的使用文档，帮助测试团队快速上手，减少沟通成本并提高团队协作效率。
+\end{itemize}
+
+\section*{Project Experience}
+\textbf{超高动态范围传感器快速Tonemapping和ISP} \hfill 2024/04 - 至今
+\begin{itemize}[noitemsep]
+\item 设计并实现基于硬件加速的高速色调映射算法，支持24Bit-HDR图像的实时处理与LDR显示，动态范围接近人眼感知极限（130-140dB）。
+\item 开发端到端可学习的ISP算法，通过小型神经网络实时估算Global Tonemapping参数，显著提升24位视频流的处理效率与图像质量。
+\item 在ISP算法中引入端到端可微设计，支持任务扩展与联合优化；例如，将ISP与目标检测任务结合，优化ISP输出以适配检测网络，显著提升目标检测精度。
+\item 通过实验验证算法在多种场景下的性能，确保其在复杂光照条件下的稳定性。
+\end{itemize}
+
+\textbf{RGB-IR传感器ISP和快速反射去除} \hfill 2023/08 - 2023/12
+\begin{itemize}[noitemsep]
+\item 设计并实现基于GPU加速的RGB-IR传感器图像信号处理管线（ISP），显著提升图像处理效率，满足实时性要求。
+\item 提出一种基于红外光特性的反射去除算法，利用NIR波段对玻璃反射的低敏感性，结合可见光波段信息，有效分离并去除反射干扰，提升图像质量。
+\item 采用引导滤波技术优化RGB-IR图像的特征提取与融合过程，在保证算法精度的同时，大幅降低模型复杂度与参数量，提升计算效率。
+\end{itemize}
+
+\textbf{基于HDR-Plus的HDR视频处理应用开发} \hfill 2022/12 - 2023/02
+\begin{itemize}[noitemsep]
+  \item 基于HDR-Plus文章，应用文章中多帧融合，滤波降噪等新提出的ISP模块
+  \item 使用PyQt实现HDR-Plus处理序列Raw数据并生成HDR视频的GUI应用[\href{https://github.com/Zhang-Setsail/Computer_Graphics/tree/main/code/Project}{Link}]
+\end{itemize}
+
+\section*{Language and Skills}
+\begin{itemize}[noitemsep]
+\item \textbf{语言能力}：IELTS 7.0（阅读8.5 / 听力7.5 / 口语6.0 / 写作6.0）能够熟练阅读英文技术文档并交流。
+\item \textbf{编程技能}：掌握Python、C++等编程语言，具备扎实的编程基础和良好的代码实践能力。
+\item \textbf{技术专长}：熟悉传统图像处理算法和基于深度学习的图像处理技术，深入了解图像信号处理管线（ISP）的各个模块及其实现原理。
+\end{itemize}
+
+\end{document}

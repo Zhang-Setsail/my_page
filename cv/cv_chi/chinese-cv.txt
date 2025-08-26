@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{CJKutf8}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+
+\begin{document}
+\begin{CJK*}{UTF8}{gbsn}
+
+\centerline{\Large\bf 张启航}
+\centerline{电话: +86 18239028628 \quad 邮箱: qihangzhang@link.cuhk.edu.cn \quad Github: Zhang-Setsail}
+
+\section*{教育背景}
+\textbf{香港中文大学（深圳）} \hfill 2019/08 - 2023/06 \\
+工学学士
+\begin{itemize}[noitemsep]
+  \item 专业：计算机科学与工程
+\end{itemize}
+
+\textbf{香港中文大学（深圳）} \hfill 2023/08 - 至今 \\
+哲学硕士
+\begin{itemize}[noitemsep]
+  \item 专业：计算机科学
+\end{itemize}
+
+\section*{工作经历}
+\textbf{香港中文大学（深圳）数据科学学院} \hfill 2023/09 - 至今 \\
+助教 \hfill 深圳
+\begin{itemize}[noitemsep]
+  \item 担任计算实验室、数据库系统和并行编程课程的助教
+  \item 协助教授安排教程课程大纲，每周教授辅导课并在答疑时间解答学生问题
+  \item 更新作业结构并在作业中使用最新的计算机科学技术，如在并行编程课程中使用Triton
+\end{itemize}
+
+\textbf{维沃移动通信有限公司} \hfill 2021/07 - 2021/10 \\
+软件开发实习生 \hfill 深圳
+\begin{itemize}[noitemsep]
+  \item 开发和维护安卓测试引擎，完成多个自动化测试组件的开发和实现，在提高测试效率和覆盖率方面取得优异成果
+  \item 根据开发内容扩展引擎使用文档，提高测试团队工作效率，减少沟通时间
+  \item 确保测试引擎能够支持不同国家的定制化测试需求，开发过程中理解不同地区的文化特性
+  \item 满足Google测试工程要求，实现手机使用Google Android测试基准的全流程自动化
+\end{itemize}
+
+\section*{研究经历}
+\textbf{超高动态范围传感器快速色调映射和ISP} \hfill 2024/04 - 至今
+\begin{itemize}[noitemsep]
+  \item 设计基于硬件的色调映射算法，实现接近人眼动态范围（130-140dB）的超HDR图像的LDR显示
+  \item 实现端到端可学习的简化ISP算法，利用小型神经网络估算图像的全局色调映射参数，实现24位视频流的实时估算
+  \item 在ISP算法设计中融入端到端可微分性以保证未来扩展性，如ISP输出图像可适应目标检测任务，实现ISP与相应任务的联合优化
+\end{itemize}
+
+\textbf{RGB-IR传感器ISP和快速反射去除} \hfill 2023/08 - 2023/12
+\begin{itemize}[noitemsep]
+  \item 实现基于GPU的RGB-IR传感器图像ISP
+  \item 基于玻璃对红外光的低反射特性设计反射去除算法，利用红外波段信息去除可见光波段的反射，提供更好的多光谱图像
+  \item 利用引导滤波加速RGB-IR图像的特征提取和融合
+\end{itemize}
+
+\section*{语言和技能}
+\begin{itemize}[noitemsep]
+  \item 语言：雅思：总分7.0（阅读：8.5/听力：7.5/口语：6.0/写作：6.0）
+  \item 编程技能：精通Python等编程语言
+  \item 专业知识：精通传统和基于深度学习的图像处理算法，熟悉图像信号处理管线的各个模块
+\end{itemize}
+
+\end{CJK*}
+\end{document}

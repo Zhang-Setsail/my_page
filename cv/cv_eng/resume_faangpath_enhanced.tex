@@ -1,0 +1,196 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Zhang Qihang} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{Page: \href{https://zhangsetsail.com/}{zhangsetsail.com} \\ Email: qihangzhang@link.cuhk.edu.cn \\ Github: \href{https://github.com/Zhang-Setsail}{Zhang-Setsail}} 
+
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education Background}
+
+\setlength{\parskip}{2pt}
+
+{\bf The Chinese University of Hong Kong, Shenzhen} \hfill {08/2023 - Present}\\
+\textit{Master of Philosophy}
+\begin{itemize}
+    \item Major: Computer Science
+    \item Research Focus: Computational Photography and Low-Level Vision
+    \item Advisor: Prof. Qilin Sun
+\end{itemize}
+
+{\bf Tokyo Institute of Technology, Japan} \hfill {04/2025 - 09/2025}\\
+\textit{Research Assistant}
+\begin{itemize}
+    \item Supervised by Prof. Masayuki Tanaka and Prof. Yusuke Monno
+    \item Research Focus: Polarized Image Processing
+\end{itemize}
+
+{\bf The Chinese University of Hong Kong, Shenzhen} \hfill {08/2019 - 06/2023}\\
+\textit{Bachelor of Engineering}
+\begin{itemize}
+    \item Major: Computer Science and Engineering
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{WORK EXPERIENCE}
+
+\setlength{\parskip}{1.5pt}
+
+\textbf{School of Data Science, CUHK-Shenzhen} \hfill 09/2023 - Present\\
+Teaching Assistant \hfill \textit{Shenzhen}
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Served as a teaching assistant for Computational Laboratory, Database Systems, and Parallel Programming courses across multiple semesters
+    \item Help professors arrange tutorial course content outlines. Teach tutorial courses each week and answer questions during office hours
+    \item Update the assignment structure and use the latest CS technology in assignments to meet current requirements, such as Triton in Parallel Programming course
+\end{itemize}
+
+\textbf{Vivo Mobile Communication Co., Ltd} \hfill 07/2021 - 10/2021\\
+SDE Intern \hfill \textit{Shenzhen}
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Developed and maintained the android test engine, completed the development and implementation of multiple automated test components, and achieved excellent results in improving test efficiency and coverage rate
+    \item Extended the engine usage documents according to the development content, improved the work efficiency of the test team, and reduce the communication time
+    \item Ensured that the test engine could support customized testing needs for different countries, and understood the cultural uniqueness of different regions during the development process
+    \item Fulfilled with Google's test engineering requirements to automate the entire process of using Google's Android test benchmarks for mobile phones
+\end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{RESEARCH EXPERIENCE}
+
+\setlength{\parskip}{1.5pt}
+
+\textbf{Joint Polarized Image Demosaicing AND Denoising} \hfill 04/2025 - 09/2025\\
+\textit{Tokyo Institute of Technology, Japan}
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Proposed the first joint denoising and demosaicing framework for color-polarized imaging, addressing both degradations within a shared feature space
+    \item Designed an encoder-based feature fusion mechanism to enhance reconstruction quality
+    \item Built a real-world paired polarized image dataset to support model training and evaluation
+    \item Outperformed existing methods across multiple metrics
+\end{itemize}
+
+\textbf{Ultra-high Dynamic Range Sensor Fast Tone Mapping and ISP} \hfill 04/2024 - Present\\
+\textit{CUHK-Shenzhen \& PointSpread Technology}
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Design a hardware-based tone mapping algorithm to achieve LDR display of Ultra-HDR images which have dynamic range close to the human eye (130-140dB)
+    \item Implement an end-to-end learnable simplified ISP algorithm that utilizes a small neural network to estimate the global tone mapping parameters for an image, enabling real-time estimation on a 24-bit video stream
+    \item Incorporate end-to-end differentiability in the design of the ISP algorithm to guarantee future expandability. For example, the ISP's output image can be adapted for target detection tasks, enabling joint optimization between the ISP and the corresponding task, thereby enhancing the output metrics
+\end{itemize}
+
+\textbf{RGB-IR Sensor ISP and Fast Reflection Removal} \hfill 08/2023 - 12/2023
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Implement GPU-based RGB-IR sensor image ISP
+    \item Design reflection removal algorithm based on the low reflection property of glass to infrared light, use infrared band information to remove the reflection of the visible light band and provide better multi-spectral images
+    \item Utilize guided filter to accelerate the feature extraction and fusion from RGB-IR image
+\end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	PROJECT EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECT EXPERIENCE}
+
+\setlength{\parskip}{1.5pt}
+
+\textbf{Camera Image Simulation Pipeline (Huawei Collaboration)} \hfill 08/2024 - Present\\
+Product Design and Programming
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Designed and implemented a full-stack simulation pipeline modeling the camera imaging process from optics to sensor
+    \item Applied spatially varying Point Spread Function (PSF) kernels to simulate lens-induced degradation across the image
+    \item Built a sensor noise modeling framework to generate realistic pixel-level noise maps
+    \item Delivered an extensible and modular pipeline that can be adapted to different sensors/lenses, providing high-fidelity synthetic raw data for algorithm development and validation
+\end{itemize}
+
+\textbf{Parallel Computing Operator Template} \hfill 09/2024 - 12/2024\\
+Programming
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Built a modular CPU/GPU parallel operator library including image operators (grayscale, blur, Sobel), matrix multiplication, and DNN layers (convolution, fully connected) with backpropagation support
+    \item Optimized CPU kernels using MPI, Pthreads, OpenMP, and developed high-performance GPU kernels using CUDA and Triton
+    \item Triton/CUDA implementations of image operators and matrix multiplication outperformed baseline PyTorch eager implementations under equivalent settings
+\end{itemize}
+
+\textbf{HDR Plus Based HDR Video Processing Application} \hfill 12/2022 - 03/2023\\
+Programming
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Implemented a high dynamic range (HDR) video processing pipeline based on Google's HDR+ paper, utilizing multi-frame short-exposure RAW synthesis
+    \item Integrated HDR+ ISP modules including multi-frame alignment and fusion, filtering for noise reduction, and local tone mapping
+    \item Developed a graphical user interface (GUI) application using Python and PyQt5 framework for user-friendly operation, supporting RAW image sequence selection and processing, with FFmpeg integration for final HDR video synthesis
+\end{itemize}
+
+\end{rSection} 
+
+%----------------------------------------------------------------------------------------
+%	SERVICE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{SERVICE \& LEADERSHIP}
+
+\setlength{\parskip}{1.5pt}
+
+\textbf{Teaching Assistant} \hfill CUHK-Shenzhen
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item Parallel Computing (CSC4050) - 2024 Fall
+    \item Computational Laboratory (CSC1002) - 2024 Spring
+    \item Database System (CSC3170) - 2023 Fall
+\end{itemize}
+
+\textbf{Volunteer} \hfill 2020\\
+Office of Student Affairs, CUHK-Shenzhen
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{LANGUAGE \& SKILLS} 
+\begin{itemize}
+    \setlength{\itemsep}{0pt}
+    \setlength{\parsep}{0pt}
+    \setlength{\parskip}{0pt}
+    \item \textbf{Language}: IELTS: overall: 7.0(R: 8.5/ L: 7.5/ S: 6.0/ W: 6.0)
+    \item \textbf{Programming Skills}: Proficient in Python, familiar with C/C++, CUDA
+    \item \textbf{Research Interests}: Image Processing, HDR Imaging, Novel Sensors, Computational Photography, Low-Level Vision
+\end{itemize}
+
+\end{rSection}
+
+\end{document}

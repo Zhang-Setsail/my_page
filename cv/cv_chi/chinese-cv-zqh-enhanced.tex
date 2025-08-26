@@ -1,0 +1,145 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[UTF8]{ctex}
+\usepackage[top=0.3in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{setspace}
+
+\setstretch{1.15}
+\setlist{itemsep=3pt,topsep=4pt,parsep=0pt,partopsep=0pt}
+
+% Add space between sections
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+
+% Add space between subsections within sections
+\newcommand{\spacedsection}[2]{%
+    \vspace{10pt}%
+    \textbf{#1} \hfill #2 \\%
+}
+
+% Add space between project entries
+\newcommand{\projectspace}{\vspace{8pt}}
+
+
+\begin{document}
+
+\centerline{\Large\bf 张启航}
+\centerline{个人主页: \href{https://zhangsetsail.com/zn_ch}{zhangsetsail.com} \\ Email: qihangzhang@link.cuhk.edu.cn \\ Github: \href{https://github.com/Zhang-Setsail}{Zhang-Setsail}} 
+
+\section*{Education}
+
+\textbf{香港中文大学（深圳）} \hfill 2023/08 - 2026/06 \\
+学术型硕士
+\begin{itemize}[noitemsep]
+  \item 专业：计算机科学
+  \item 导师：\href{https://scholar.google.com/citations?hl=zh-CN&user=igqPS8sAAAAJ&view_op=list_works&sortby=pubdate}{孙启霖}教授
+  \item 研究方向：计算成像与低层视觉
+\end{itemize}
+
+\projectspace
+\textbf{东京工业大学} \hfill 2025/04 - 2025/09 \\
+科研助理
+\begin{itemize}[noitemsep]
+  \item 指导老师：\href{https://www.vip.sc.eng.isct.ac.jp/mtanaka/}{田中正行}教授和\href{http://www.ok.sc.e.titech.ac.jp/~ymonno/}{紋野雄介}教授
+  \item 研究方向：偏振成像
+\end{itemize}
+
+\projectspace
+\textbf{香港中文大学（深圳）} \hfill 2019/08 - 2023/06 \\
+工学学士
+\begin{itemize}[noitemsep]
+  \item 专业：计算机科学与工程
+\end{itemize}
+
+\section*{Work Experience}
+% \textbf{香港中文大学（深圳）数据科学学院} \hfill 2023/09 - 至今 \\
+%  助教 \hfill 深圳
+% \begin{itemize}[noitemsep]
+% \item 担任Database System（CSC3170）、Parallel Programming（CSC4005）和Computer Lab（CSC1002）等核心课程的助教，负责课程支持与学生指导工作。
+% \item 优化课程作业模板与自动化评分系统，引入前沿技术（\href{https://github.com/tonyyxliu/CUHKSZ-CSC4005/tree/main/project4}{如Triton框架}）作为编程实践工具，提升学生实践能力与课程实用性。
+% \end{itemize}
+
+\textbf{Vivo移动通信} \hfill 2022/06 - 2022/11 \\
+ 测试引擎开发实习生 \hfill 深圳
+\begin{itemize}[noitemsep]
+\item 参与Android测试引擎的开发与维护，编写并优化核心代码，开发多个基于Python的ADB自动化测试组件以提升测试效率与覆盖率，同时提高代码的可读性和可维护性。
+\item 扩展测试引擎功能，支持多国定制化测试需求，确保测试流程适配不同地区的语言和文化要求。
+\item 实现Google Android测试基准的全流程自动化，编写脚本并集成工具链，确保测试流程符合Google测试工程规范。
+\item 编写并更新测试引擎的使用文档，帮助测试开发团队快速上手，减少沟通成本并提高团队协作效率。
+\end{itemize}
+
+\section*{Research Experience}
+\textbf{彩色偏振图像联合去噪与去马赛克} \hfill 2025/04 - 2025/09 \\
+Collaborators：\href{https://www.vip.sc.eng.isct.ac.jp/mtanaka/}{田中正行}教授，\href{http://www.ok.sc.e.titech.ac.jp/~ymonno/}{紋野雄介}教授
+\begin{itemize}[noitemsep]
+\item 提出了首个面向彩色偏振成像的联合去噪与去马赛克重建框架，在共享特征空间内协同建模并恢复退化图像。
+\item 设计了基于编码器特征融合机制的图像重建模型，显著提升了重建质量。
+\item 构建了首个真实世界彩色偏振图像数据集，支持模型训练与评估。
+\item 在多个指标上显著优于现有偏振图像去噪与去马赛克方法。
+\end{itemize}
+
+\projectspace
+\textbf{超高动态范围传感器快速Tonemapping和ISP} \hfill 2024/05 - 2024/11 \\
+Collaborators：\href{https://scholar.google.com/citations?hl=zh-CN&user=igqPS8sAAAAJ&view_op=list_works&sortby=pubdate}{孙启霖}教授，\href{https://www.pointspread.cn/}{点昀技术}
+\begin{itemize}[noitemsep]
+\item 设计并实现基于硬件加速的高速色调映射算法，支持24Bit-HDR图像的实时处理与LDR显示，实现动态范围接近人眼感知极限（130-140dB）视频的LDR输出。
+\item 开发端到端可学习的ISP算法，通过小型神经网络实时估算Global Tonemapping参数，显著提升24位视频流的处理效率与图像质量。
+\item 在ISP算法中引入端到端可微设计，支持任务扩展与联合优化；例如，将ISP与目标检测任务结合，优化ISP输出以适配检测网络，以提升目标检测精度。
+\item 通过实验验证算法在多种场景下的性能，确保其在复杂光照条件下的稳定性。
+\end{itemize}
+
+\projectspace
+\textbf{RGB-IR传感器ISP和快速反射去除} \hfill 2023/08 - 2023/12 \\
+Collaborators：\href{https://scholar.google.com/citations?hl=zh-CN&user=igqPS8sAAAAJ&view_op=list_works&sortby=pubdate}{孙启霖}教授, \href{https://www.vip.sc.eng.isct.ac.jp/mtanaka/}{田中正行}教授，\href{http://www.ok.sc.e.titech.ac.jp/~ymonno/}{紋野雄介}教授
+\begin{itemize}[noitemsep]
+\item 设计并实现基于GPU加速的RGB-IR传感器图像信号处理管线（ISP），显著提升图像处理效率，满足实时性要求。
+\item 提出一种基于红外光特性的反射去除算法，利用NIR波段对玻璃反射的低敏感性，结合可见光波段信息，有效分离并去除反射干扰，提升图像质量。
+\item 采用引导滤波技术优化RGB-IR图像的特征提取与融合过程，在保证算法精度的同时，大幅降低模型复杂度与参数量，提升计算效率。
+\end{itemize}
+
+\section*{Project Experience}
+\projectspace
+\textbf{相机仿真图像生成管线} \hfill 2024/08 - 至今 \\
+Collaborators：\href{https://scholar.google.com/citations?hl=zh-CN&user=igqPS8sAAAAJ&view_op=list_works&sortby=pubdate}{孙启霖}教授，实验室成员（负责光学部分），华为（横向委托方）
+\begin{itemize}[noitemsep]
+\item 设计并实现了从光学到传感器的完整图像仿真处理流程。
+\item 使用空间可变的点扩散函数（PSF）卷积核模拟镜头退化。
+\item 基于传感器噪声特性构建噪声模型并生成噪声Map。
+\item 完成了可扩展、可移植的仿真管线，可适配不同应用场景，为算法开发与验证提供高保真数据支撑。
+\end{itemize}
+
+\projectspace
+\textbf{CPU/GPU部分算子并行计算实现（MPI, OpenMP, CUDA, Triton）} \hfill 2024/09 - 2024/12 \\
+Collaborators：\href{https://github.com/EnderturtleOrz}{徐源}
+\begin{itemize}[noitemsep]
+\item 构建模块化CPU/GPU并行算子库，实现部分传统图像处理算子（灰度化、模糊、Sobel、双边滤波）、矩阵乘法及部分深度神经网络卷积/全连接层，并支持反向传播。
+\item 使用MPI、Pthreads、OpenMP实现CPU上的并行优化，使用CUDA和Triton实现GPU上的并行优化。
+\item GPU/Triton实现的图像算子和矩阵乘法在相同条件下性能优于基线-PyTorch实现。
+% \item 项目代码：\href{https://github.com/tonyyxliu/CUHKSZ-CSC4005}{作为TA提供模版与Baseline}
+\end{itemize}
+
+\projectspace
+\textbf{基于HDR-Plus的HDR视频处理应用开发} \hfill 2022/12 - 2023/03
+\begin{itemize}[noitemsep]
+\item 基于谷歌HDR+论文，实现多帧短曝光Raw合成的高动态范围（HDR）视频处理管线。
+\item 使用多帧对齐与融合、滤波降噪和局部色调映射等HDR+提出的ISP模块。
+\item 使用Python和PyQt5框架开发了图形用户界面（GUI）应用，方便用户操作，支持选择RAW图像序列进行处理，并通过调用FFmpeg将处理后的图像帧合成为最终的HDR视频。
+% \item 项目页面：\href{https://github.com/Zhang-Setsail/Computer_Graphics/tree/main/code/Project}{GitHub代码链接}
+\end{itemize}
+
+\section*{Research Interest}
+\begin{itemize}[noitemsep]
+\item \textbf{应用方向：} 图像处理、HDR成像、新型图像传感器
+\item \textbf{技术方向：} 计算成像、低层视觉
+\end{itemize}
+
+\section*{Language and Skills}
+\begin{itemize}[noitemsep]
+\item \textbf{语言能力}：IELTS 7.0（阅读8.5 / 听力7.5 / 口语6.0 / 写作6.0）能够熟练阅读英文技术文档并交流。
+\item \textbf{编程技能}：掌握Python、C++等编程语言，具备扎实的编程基础和良好的代码实践能力。
+\item \textbf{技术专长}：熟悉传统图像处理算法和基于深度学习的图像处理技术，深入了解图像信号处理管线（ISP）的各个模块及其实现原理。
+\item \textbf{项目信息}：部分可公开项目代码与详细内容请\href{https://zhangsetsail.com/}{查看此Link}。
+\end{itemize}
+
+\end{document}
