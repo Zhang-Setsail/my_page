@@ -393,8 +393,13 @@
               <td style="padding:0px">
                 <br>
                 <p style="text-align:right;font-size:small;">
-                  <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=FXM_7P1m-v8kWeX2Nl25xMun4CfTFCDFDoD_5lT1lOg&cl=ffffff&w=a"></script>
-                  Template from <a href="https://jonbarron.info">Jon Barron</a> 
+                  <span class="mmv-map">
+                    <script type="text/javascript" id="mapmyvisitors" src="https://mapmyvisitors.com/map.js?d=FXM_7P1m-v8kWeX2Nl25xMun4CfTFCDFDoD_5lT1lOg&cl=ffffff&w=a"></script>
+                  </span>
+                  <br>
+                  <span class="last-updated">Last updated: <span id="last-updated"></span></span>
+                  <br>
+                  Template from <a href="https://jonbarron.info">Jon Barron</a>
                 </p> 
               </td>
             </tr>
@@ -424,6 +429,18 @@
       document.addEventListener('DOMContentLoaded', function() {
         const container = document.querySelector('.page-container');
         container.classList.add('slide-in');
+
+        // Footer "Last updated" (uses document.lastModified)
+        const lastUpdatedEl = document.getElementById('last-updated');
+        if (lastUpdatedEl && document.lastModified) {
+          const d = new Date(document.lastModified);
+          if (!Number.isNaN(d.getTime())) {
+            const yyyy = d.getFullYear();
+            const mm = String(d.getMonth() + 1).padStart(2, '0');
+            const dd = String(d.getDate()).padStart(2, '0');
+            lastUpdatedEl.textContent = `${yyyy}-${mm}-${dd}`;
+          }
+        }
       });
     </script>
   </body>

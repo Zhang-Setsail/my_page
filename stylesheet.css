@@ -208,3 +208,24 @@ span.highlight {
     transform: translateY(0);
   }
 }
+
+/* Footer widgets */
+.mmv-map {
+  display: inline-block;
+  max-width: 160px;
+  overflow: hidden;
+  vertical-align: middle;
+  transform: scale(0.75);
+  transform-origin: right bottom;
+}
+
+.mmv-map img,
+.mmv-map iframe,
+.mmv-map canvas {
+  max-width: 160px !important;
+  height: auto !important;
+}
+
+.last-updated {
+  color: #666666;
+}
