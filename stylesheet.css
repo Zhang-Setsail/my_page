@@ -209,37 +209,19 @@ span.highlight {
   }
 }
 
-/* Footer widgets */
 .mmv-map {
-  display: inline-block;
   width: 140px;
-  max-width: 140px;
+  height: 80px;       /* 按你 footer 高度调 */
   overflow: hidden;
-  vertical-align: middle;
-  line-height: 0;
+  display: inline-block;
+  position: relative;
 }
 
-.mmv-map * {
-  box-sizing: border-box;
-  max-width: 100% !important;
+.mmv-map > * {
+  transform: scale(0.47);    /* 140 / 300 ≈ 0.47 */
+  transform-origin: top left;
 }
 
-/* MapMyVisitors typically injects <a><img/></a> (and sometimes wrappers). Force width. */
-.mmv-map img {
-  width: 140px !important;
-  max-width: 140px !important;
-  height: auto !important;
-  display: block;
-}
-
-.mmv-map a,
-.mmv-map div,
-.mmv-map table,
-.mmv-map iframe,
-.mmv-map canvas {
-  width: 140px !important;
-  max-width: 140px !important;
-}
 
 .last-updated {
   color: #666666;
