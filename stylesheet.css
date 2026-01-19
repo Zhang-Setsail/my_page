@@ -209,18 +209,27 @@ span.highlight {
   }
 }
 
+/* footer visitor map */
 .mmv-map {
-  width: 140px;
-  height: 80px;       /* 按你 footer 高度调 */
-  overflow: hidden;
   display: inline-block;
+  width: 140px;
+  height: 70px;          /* 按 footer 实际高度调 */
+  overflow: hidden;
   position: relative;
+  vertical-align: top;
 }
 
+/* 无视 MapMyVisitors 内部结构 */
 .mmv-map > * {
-  transform: scale(0.47);    /* 140 / 300 ≈ 0.47 */
-  transform-origin: top left;
+  transform: scale(0.47);   /* 140 / 300 ≈ 0.47 */
+  transform-origin: top right;
 }
+
+p .mmv-map {
+  float: right;
+  clear: both;
+}
+
 
 
 .last-updated {
