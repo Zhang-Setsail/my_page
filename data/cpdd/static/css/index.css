@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #191919;
+  font-family: "Hiragino Kaku Gothic Pro", "Meiryo", Osaka, "MS PGothic", sans-serif;
+  font-size: 14px;
+  line-height: 2;
+  -webkit-text-size-adjust: none;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px 0px 20px;
+  font-size: 200%;
+}
+
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+figure {
+  margin: 0px;
+  padding: 0px;
+  font-size: 120%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ol {
+  padding-left: 40px;
+  padding-bottom: 15px;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a:hover img {
+  opacity: 0.6;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 100%;
+  border-spacing: 0;
+}
+
+iframe {
+  width: 100%;
+}
+
+h2 {
+  clear: both;
+  margin-bottom: 15px;
+  color: #fff;
+  padding: 5px 20px;
+  background: #000033;
+  border-radius: 4px;
+}
+
+h3 {
+  clear: both;
+  margin-bottom: 15px;
+  padding: 3px 20px;
+  border-radius: 4px;
+  border: 2px solid #191919;
+}
+
+p {
+  padding: 0px 20px 20px;
+}
+
+a {
+  color: #191919;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #d50f26;
+}
+
+figcaption {
+  color: #333;
+  font-size: 85%;
+  line-height: 1.5;
+  text-align: center;
+}
+
+#container {
+  width: 80%;
+  max-width: 1000px;
+  margin: 1% auto 0px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 4%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+}
+
+header p {
+  padding-bottom: 0px;
+}
+
+#new dl {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+#new dt {
+  font-weight: bold;
+  float: left;
+  font-size: 100%;
+}
+
+#new dd {
+  padding-left: 1em;
+  font-size: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+.dataset-counts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  padding: 0px 20px 15px;
+}
+
+.dataset-counts span {
+  display: inline-block;
+  padding: 1px 10px;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.control-panel {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr 1.4fr;
+  gap: 10px;
+  padding: 0px 20px 18px;
+}
+
+.control-group {
+  min-width: 0;
+  padding: 10px;
+  border: 2px solid #191919;
+  border-radius: 4px;
+}
+
+.control-label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.segmented button {
+  min-height: 28px;
+  padding: 2px 10px;
+  border: 1px solid #191919;
+  border-radius: 4px;
+  background: #fff;
+  color: #191919;
+  cursor: pointer;
+  font: inherit;
+  font-size: 90%;
+  line-height: 1.5;
+  transition: 0.5s;
+}
+
+.segmented button:hover,
+.segmented button.is-active {
+  background: #191919;
+  color: #fff;
+}
+
+.comparison-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 14px;
+  padding: 0px 20px 20px;
+}
+
+.compare-viewer {
+  position: relative;
+  overflow: hidden;
+  min-height: 390px;
+  border: 2px solid #191919;
+  border-radius: 4px;
+  background: #0f0f0f;
+}
+
+.compare-img,
+.compare-img-overlay img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: contain;
+  background: #0f0f0f;
+}
+
+.compare-img.base {
+  position: absolute;
+  inset: 0;
+}
+
+.compare-img-overlay {
+  position: absolute;
+  inset: 0;
+  width: 50%;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+}
+
+.compare-img-overlay img {
+  width: var(--viewer-width, 100%);
+  max-width: none;
+}
+
+.compare-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: #fff;
+  pointer-events: none;
+}
+
+.compare-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -50%);
+}
+
+.compare-slider {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+}
+
+.compare-label {
+  position: absolute;
+  z-index: 3;
+  top: 10px;
+  max-width: calc(50% - 18px);
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: #191919;
+  color: #fff;
+  font-size: 90%;
+  font-weight: bold;
+}
+
+.compare-label.left {
+  left: 10px;
+}
+
+.compare-label.right {
+  right: 10px;
+}
+
+.result-panel {
+  padding: 10px;
+  border: 2px solid #191919;
+  border-radius: 4px;
+}
+
+.panel-eyebrow {
+  padding: 0px;
+  font-size: 85%;
+  font-weight: bold;
+}
+
+.result-panel h3 {
+  margin-bottom: 10px;
+  font-size: 110%;
+}
+
+.mini-compare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.mini-compare figure {
+  margin: 0px;
+}
+
+.mini-compare img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid #191919;
+  object-fit: cover;
+}
+
+.panel-note {
+  padding: 10px 0px 0px;
+  font-size: 90%;
+}
+
+.method-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0px 20px 20px;
+}
+
+.method-card {
+  margin: 0px;
+  overflow: hidden;
+  border: 1px solid #191919;
+  border-radius: 4px;
+}
+
+.method-card.is-ours {
+  border-width: 2px;
+}
+
+.method-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: #111;
+}
+
+.method-card figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 4px 7px;
+  border-top: 1px solid #191919;
+  background: #fff;
+  color: #191919;
+  font-size: 85%;
+  font-weight: bold;
+}
+
+.method-card span:last-child {
+  font-weight: normal;
+}
+
+footer {
+  clear: both;
+  text-align: center;
+  padding: 10px 0px;
+  color: #fff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+footer a {
+  text-decoration: none;
+  border: none;
+  color: #fff;
+}
+
+.pr {
+  font-size: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  #container {
+    width: 92%;
+    padding: 4%;
+  }
+
+  .control-panel,
+  .comparison-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .method-matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 150%;
+  }
+
+  h2 {
+    padding-right: 46px;
+  }
+
+  .compare-viewer,
+  .compare-img,
+  .compare-img-overlay img {
+    min-height: 260px;
+  }
+
+  .method-matrix,
+  .mini-compare {
+    grid-template-columns: 1fr;
+  }
+}

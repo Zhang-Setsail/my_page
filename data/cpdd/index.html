@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CPDDNet: Color-Polarization Denoising and Demosaicking Network</title>
+<meta name="description" content="CPDDNet: Color-Polarization Denoising and Demosaicking Network.">
+<meta property="og:title" content="CPDDNet: Color-Polarization Denoising and Demosaicking Network">
+<meta property="og:description" content="Interactive visual comparison for CPDDNet color-polarization reconstruction results.">
+<meta property="og:url" content="https://zhang-setsail.github.io/data/cpdd/">
+<meta property="og:image" content="static/results/Scene40/ours_0.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="768">
+<meta name="twitter:title" content="CPDDNet: Color-Polarization Denoising and Demosaicking Network">
+<meta name="twitter:description" content="Interactive visual comparison for CPDDNet color-polarization reconstruction results.">
+<meta name="twitter:image" content="static/results/Scene40/ours_0.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="keywords" content="CPDDNet, Color-Polarization, Denoising, Demosaicking, CPFA, Polarization Imaging, Computational Photography">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+<link rel="stylesheet" href="static/css/index.css">
+<script defer src="static/js/index.js"></script>
+</head>
+
+<body>
+
+<div id="container">
+
+<header>
+<h1>CPDDNet: Color-Polarization Denoising and Demosaicking Network</h1>
+<p>
+<a href="https://zhangsetsail.com/" target="_blank">Qihang Zhang</a><sup>1,2</sup>,
+<a href="http://www.ok.sc.e.titech.ac.jp/~ymonno/index.html" target="_blank">Yusuke Monno</a><sup>1</sup>,
+<a href="https://www.vip.sc.eng.isct.ac.jp/mtanaka/" target="_blank">Masayuki Tanaka</a><sup>1</sup>,
+and <a href="http://www.ok.sc.e.titech.ac.jp/mem/mxo/okutomi.html" target="_blank">Masatoshi Okutomi</a><sup>1</sup><br>
+<sup>1</sup>Institute of Science Tokyo &nbsp;&nbsp; <sup>2</sup>The Chinese University of Hong Kong, Shenzhen<br>
+IEEE International Conference on Image Processing 2026
+</p>
+</header>
+
+<section id="new">
+
+<h2>Project Summary</h2>
+<p class="center">
+<img src="static/results/Scene40/ours_0.png" width="800" alt="CPDDNet reconstructed color-polarization result">
+<figcaption>CPDDNet reconstructs clean color-polarization images from noisy CPFA observations.</figcaption>
+</p>
+<p>
+Color-polarization filter array (CPFA) sensors capture color texture and polarization information in a single shot. In this project, we aim at developing a high-quality denoising and demosaicking method for color-polarization cameras.
+</p><br>
+
+<h2>Paper Abstract</h2>
+<p>
+Color-polarization filter array (CPFA) sensors capture color texture and polarization information in a single shot, but the raw mosaic data suffer from both noise and missing samples. Existing pipelines usually solve denoising (DN) and demosaicking (DM) separately, which can propagate noise or oversmooth structures needed for polarization recovery. In this work, we propose <strong>CPDDNet</strong>, a color-polarization denoising and demosaicking network for CPFA sensors. CPDDNet follows a DN-to-DM design and introduces a feature fusion module to retain raw CPFA information through both stages. This improves reconstructed color-polarization images and polarization parameters under severe noise. We further build a real-world paired polarized image dataset to support model training and evaluation. Experiments show that CPDDNet outperforms existing DM-only, DM-to-DN, and DN-to-DM baselines on the high-noise color-polarization dataset.
+</p><br>
+
+<h2>Proposed Method Overview</h2>
+<p class="center">
+<img src="static/images/pipeline_pd.png" width="850" loading="lazy" alt="CPDDNet pipeline and CPFA data structure">
+<figcaption>Fig. 1. CPDDNet pipeline and CPFA data structure.</figcaption>
+</p><br>
+
+<h2>Download Materials</h2>
+<dd>
+<li>Paper <a href="static/pdfs/ICIP2026_Zhang.pdf" target="_blank">[PDF]</a></li>
+<li>Supplementary Material <a href="static/pdfs/supplementary_material_icip26.pdf" target="_blank">[PDF]</a></li>
+<li>Code <a href="https://github.com/Zhang-Setsail/CPDDNet" target="_blank">[Link]</a></li>
+</dd><br><br>
+
+<h2 id="comparison">Interactive Visual Comparison</h2>
+<p>
+Select a scene, polarization angle, and the image shown on the left side of the slider. The right side is fixed to CPDDNet.
+</p>
+
+<div class="dataset-counts">
+<span>5 scenes</span>
+<span>4 angles</span>
+<span>7 pipelines</span>
+</div>
+
+<div class="control-panel">
+<div class="control-group">
+<span class="control-label">Scene</span>
+<div class="segmented" id="scene-tabs"></div>
+</div>
+<div class="control-group">
+<span class="control-label">Angle</span>
+<div class="segmented compact" id="angle-tabs"></div>
+</div>
+<div class="control-group">
+<span class="control-label">Left method</span>
+<div class="segmented method-tabs" id="method-tabs"></div>
+</div>
+</div>
+
+<div class="comparison-layout">
+<div class="compare-viewer">
+<div class="compare-label left" id="left-method-label">IGRI-2</div>
+<div class="compare-label right">CPDDNet (Ours)</div>
+<img class="compare-img base" id="right-image" src="static/results/Scene40/ours_0.png" alt="CPDDNet reconstruction">
+<div class="compare-img-overlay" id="compare-overlay">
+<img id="left-image" src="static/results/Scene40/igri2_0.png" alt="Selected method reconstruction">
+</div>
+<div class="compare-divider" id="compare-divider" aria-hidden="true"></div>
+<input id="compare-slider" class="compare-slider" type="range" min="0" max="100" value="50" aria-label="Comparison slider">
+</div>
+
+<aside class="result-panel">
+<div>
+<p class="panel-eyebrow">Current selection</p>
+<h3 id="selection-title">Scene40 &middot; 0 deg</h3>
+</div>
+<div class="mini-compare">
+<figure>
+<img id="gt-preview" src="static/results/Scene40/reference_0.png" loading="lazy" alt="Ground truth preview">
+<figcaption>Ground Truth</figcaption>
+</figure>
+<figure>
+<img id="ours-preview" src="static/results/Scene40/ours_0.png" loading="lazy" alt="CPDDNet preview">
+<figcaption>CPDDNet</figcaption>
+</figure>
+</div>
+<p class="panel-note">Drag the vertical handle to inspect local differences.</p>
+</aside>
+</div>
+
+<div class="method-matrix" id="method-matrix" aria-live="polite"></div><br>
+
+<h2>Publication</h2>
+<dl>
+<dt>CPDDNet: Color-Polarization Denoising and Demosaicking Network <a href="static/pdfs/ICIP2026_Zhang.pdf" target="_blank">[PDF]</a></dt><br>
+<dd>Qihang Zhang, Yusuke Monno, Masayuki Tanaka, and Masatoshi Okutomi</dd>
+<dd>IEEE International Conference on Image Processing (ICIP), 2026.</dd>
+</dl><br>
+
+<h2>BibTeX</h2>
+<p>Coming soon.</p>
+
+</section>
+
+</div>
+<!--/container-->
+
+<footer>
+<small>Copyright&copy; Okutomi-Tanaka Lab. All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>
